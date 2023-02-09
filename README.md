@@ -27,7 +27,7 @@ touch Gemfile.lock
 ## 5. コンテナ内で rails new を実行
 
 ```
-docker-compose run web rails new . --force -d postgresql --skip-bundle
+docker-compose run rails rails new . --force -d postgresql --skip-bundle
 ```
 
 `run`: image の構築から、コンテナの構築・起動まで行う。
@@ -79,5 +79,5 @@ docker-compose up -d
 ## 10. database 作成
 
 ```
-docker-compose run web rails db:create
+docker-compose run rails rails db:create
 ```
