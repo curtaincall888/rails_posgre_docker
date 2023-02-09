@@ -68,7 +68,7 @@ default: &default
 docker-compose build
 ```
 
-- 5. で Gemfile の内容が変更されている為
+- 5 で Gemfile の内容が変更されている為
 
 ## 9. 起動
 
