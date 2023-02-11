@@ -81,3 +81,11 @@ docker-compose up -d
 ```
 docker-compose run rails rails db:create
 ```
+
+## frontend と連携させる場合
+
+- [frontend](https://github.com/curtaincall888/next_on_docker) と開発環境で連携させる場合は、下記の network を作成する
+
+```
+docker network create external-network --subnet=192.168.192.0/20 --gateway=192.168.192.1
+```
