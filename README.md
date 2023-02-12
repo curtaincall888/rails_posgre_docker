@@ -1,3 +1,28 @@
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+- Ruby version
+
+- System dependencies
+
+- Configuration
+
+- Database creation
+
+- Database initialization
+
+- How to run the test suite
+
+- Services (job queues, cache servers, search engines, etc.)
+
+- Deployment instructions
+
+- ...
+
 # 環境構築した手順
 
 ## 1. Dockerfile 作成
@@ -27,7 +52,7 @@ touch Gemfile.lock
 ## 5. コンテナ内で rails new を実行
 
 ```
-docker-compose run rails rails new . --force -d postgresql --skip-bundle
+docker-compose run rails rails new . --force -d postgresql -j esbuild --skip-bundle
 ```
 
 `run`: image の構築から、コンテナの構築・起動まで行う。
