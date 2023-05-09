@@ -1,25 +1,25 @@
 # README
 
-# 環境構築した手順
+# 環境構築手順
 
 ## 1. Dockerfile 作成
-
+- 既存のままでも rails new 可能(手順 5)
 - 内容は file 参照
 
 ## 2. docker-compose.yml 作成
-
+- 既存のままでも rails new 可能(手順 5)
 - 内容は file 参照
 
 ## 3. Gemfile 作成
-
+- 既存のままでも rails new 可能(手順 5)
 ```
 bundle init
 ```
 
-- Gemfile の rails の version を任意の version に変更
+- 必要があれば、Gemfile の rails の version を任意の version に変更
 
 ## 4. Gemfile.lock 作成
-
+- 既存のままでも rails new 可能(手順 5)
 - 空の Gemfile.lock を作成
 
 ```
@@ -33,7 +33,7 @@ docker-compose run rails rails new . --force -d postgresql -j esbuild --skip-bun
 ```
 
 - `run`: image の構築から、コンテナの構築・起動まで行う。
-- `--force`: ファイルが存在する場合に上書きで作成するためのオプション。(必要に応じて)
+- `--force`: ファイルが存在する場合に上書きで作成するためのオプション。
 - `-d postgresql`: 使用するデータベースの指定をするためのオプション。
 - `--skip-bundle`: bundle install をスキップするためのオプション。
 
