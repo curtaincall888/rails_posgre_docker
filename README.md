@@ -32,10 +32,10 @@ touch Gemfile.lock
 docker-compose run rails rails new . --force -d postgresql -j esbuild --skip-bundle
 ```
 
-`run`: image の構築から、コンテナの構築・起動まで行う。
-`--force`: ファイルが存在する場合に上書きで作成するためのオプション。
-`-d postgresql`: 使用するデータベースの指定をするためのオプション。
-`--skip-bundle`: bundle install をスキップするためのオプション。
+- `run`: image の構築から、コンテナの構築・起動まで行う。
+- `--force`: ファイルが存在する場合に上書きで作成するためのオプション。(必要に応じて)
+- `-d postgresql`: 使用するデータベースの指定をするためのオプション。
+- `--skip-bundle`: bundle install をスキップするためのオプション。
 
 ## 6. .env を作成、編集
 
@@ -64,10 +64,14 @@ default: &default
 + password: <%= ENV["POSTGRES_PASSWORD"] %>
 ```
 
-## 8. build
+## 8. build & bundle install
 
 ```
 docker-compose build
+```
+
+```
+docker-compose run rails bundle install
 ```
 
 - 5 で Gemfile の内容が変更されている為
